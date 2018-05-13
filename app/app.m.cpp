@@ -48,11 +48,13 @@ int main(int argc, char **argv)
         NonMovingMarkSweep                 concreteHeap;
         TypeErasedHeap<NonMovingMarkSweep> heap(&concreteHeap);
         auto x1 = Cell::create<int>(&heap, 5);
+        cout << x1->as<int>() << '\n';
       } break;
 
       case 1:{
         NonMovingMarkSweep heap;
         auto x1 = Cell::create<int>(&heap, 5);
+        cout << x1->as<int>() << '\n';
       } break;
     }
 }
