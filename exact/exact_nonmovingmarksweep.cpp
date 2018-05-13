@@ -11,7 +11,7 @@ namespace exact {
 
 void NonMovingMarkSweep::deallocate(const Cell *cell)
 {
-    delete cell->object();
+    std::free(cell->object());
     d_cells.erase(*cell);
 }
 
